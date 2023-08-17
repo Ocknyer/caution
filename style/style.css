@@ -24,13 +24,14 @@ nav {
 
 #container {
   display: flex;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   line-height: 30px;
   background: url(../img/2x/background@2x.png) center / cover repeat-y fixed;
   margin: 0 auto;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 h1 {
@@ -44,8 +45,19 @@ h1 {
 }
 
 .info > h2 {
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: #e9a115;
+}
+
+.info > h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #e9a115;
+  margin: 15px auto;
 }
 
 p {
@@ -56,6 +68,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 20px;
 }
 
 .title-wrapper {
@@ -91,6 +104,7 @@ p {
 .info-head {
   font-size: 20px;
   margin-bottom: 5px;
+  color: #e9a115;
 }
 
 .info-bottom {
@@ -153,19 +167,32 @@ p {
   color: white;
 }
 
+.setlist-section > section {
+  border: 1px solid #e9a115;
+  margin-bottom: 10px;
+}
+
 .h1-setlist {
   display: inline-block;
   padding: 5px 15px;
   background-color: #e9a115;
   color: black;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
+
+/* .team-box {
+  border: 1px solid #e9a115;
+  width: 100%;
+} */
 
 /* setlist */
 .teamName {
   font-size: 20px;
+  font-weight: 700;
   margin-top: 30px;
   margin-bottom: 10px;
+  color: #e9a115;
 }
 
 .teamName::after {
@@ -173,7 +200,7 @@ p {
   display: block;
   width: 50px;
   height: 1px;
-  background-color: #1c1c1c;
+  background-color: #e9a115;
   margin: 15px auto;
 }
 
@@ -207,6 +234,7 @@ p {
 /* Mobile - Portrait */
 @media (max-width: 575px) {
   nav {
+    position: fixed;
     bottom: 0;
     height: 50px;
     font-size: 15px;
@@ -216,7 +244,13 @@ p {
 
   #container {
     width: 100%;
+    height: 100%;
     line-height: 28px;
+  }
+
+  .logo {
+    width: 250px;
+    margin-top: 50px;
   }
 
   h1 {
@@ -225,7 +259,7 @@ p {
   }
 
   .info > h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
@@ -316,8 +350,8 @@ p {
   }
 
   .lineup-img {
-    width: 100%;
-    top: 10%;
+    width: 1000px;
+    top: 5%;
   }
 
   /* setlist */
@@ -377,10 +411,10 @@ p {
     margin-bottom: 30px;
   }
 
-  /* .lineup-img {
-    width: 50%;
-    top: 10%;
-  } */
+  .lineup-img {
+    width: 1000px;
+    /* top: 10%; */
+  }
 
   .notice {
     font-size: 12px;
@@ -399,16 +433,17 @@ p {
   #container {
     width: 100%;
     line-height: 30px;
+    /* overflow: hidden; */
   }
 
   .main-wrapper {
     height: 100%;
   }
 
-  /* .lineup-img {
-    width: 80%;
-    top: 10%;
-  } */
+  .lineup-img {
+    width: 1200px;
+    /* top: 10%; */
+  }
 
   .title {
     margin-top: 100px;
@@ -422,7 +457,7 @@ p {
 /* Desktop */
 @media (min-width: 992px) and (max-width: 1199px) {
   #container {
-    width: 100%;
+    width: 100vw;
   }
 
   .main-wrapper {
