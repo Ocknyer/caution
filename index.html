@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>CAUTION!</title>
+    <script src="js/index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=aejuu1jw3l"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="./" class="linked">공연 안내 & 예매</a>
+      <a href="./setlist" class="linked">라인업 & 셋리스트</a>
+    </nav>
+    <div id="container">
+      <div class="main-wrapper">
+        <div class="title-wrapper">
+          <h1 class="title">
+            CAUTION!
+          </h1>
+        </div>
+        <div class="info">
+          <a
+            href="https://dudoong.com/events/49"
+            target="_blank"
+            class="reservation"
+            >CAUTION 예매하기</a
+          >
+          <h2>공연안내</h2>
+          <p class="info-head">일시</p>
+          <p class="info-bottom">
+            2023년 9월 3일 일요일 17:00 ~ 20:00
+          </p>
+          <p class="info-head">장소</p>
+          <p class="info-bottom-address">
+            클럽FF (서울특별시 마포구 와우산로17길 12)
+          </p>
+          <div id="map"></div>
+          <a
+            class="openApp"
+            href="nmap://search?query=%ED%81%B4%EB%9F%BDFF&appname=com.example.myapp"
+            >네이버 지도에서 열기
+          </a>
+          <p class="info-head">수용인원</p>
+          <p class="info-bottom">100명 / 전석 스탠딩</p>
+          <p class="info-head">티켓</p>
+          <p class="info-bottom">8,000원</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var mapOptions = {
+      center: new naver.maps.LatLng(37.550212, 126.92229),
+      zoom: 15,
+    };
+
+    var map = new naver.maps.Map('map', mapOptions);
+
+    var marker = new naver.maps.Marker({
+      position: new naver.maps.LatLng(37.550212, 126.92229),
+      map: map,
+    });
+  </script>
+</html>
